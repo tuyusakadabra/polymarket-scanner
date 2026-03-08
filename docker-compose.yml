@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  scanner:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./:/app
+    command: ["python", "-m", "polymarket_arb.cli", "scan"]
