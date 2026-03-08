@@ -1,0 +1,15 @@
+relations:
+  - relation_id: us_election_dem_implies_party
+    kind: implies
+    left_market_slug: us-election-winner-democrat
+    right_market_slug: us-election-winner-democratic-party
+    threshold_bps: 20
+    note: "If candidate is Democrat, party outcome should not be priced below candidate outcome by too much"
+
+  - relation_id: weather_rain_vs_precip
+    kind: bounded_spread
+    left_market_slug: nyc-rain-tomorrow
+    right_market_slug: nyc-any-precip-tomorrow
+    max_positive_bps: 50
+    max_negative_bps: 10
+    note: "Rain is subset of any precipitation"

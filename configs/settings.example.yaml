@@ -1,0 +1,28 @@
+env: dev
+log_level: INFO
+log_json: false
+
+database_url: sqlite+aiosqlite:///./polymarket_arb.db
+
+gamma_base_url: https://gamma-api.polymarket.com
+clob_base_url: https://clob.polymarket.com
+
+min_liquidity: 0
+category: null
+slug_contains: null
+max_markets: 50
+
+stale_timeout_seconds: 20
+signal_net_edge_bps_threshold: 15
+taker_fee_bps: 10
+estimated_slippage_bps: 5
+queue_penalty_bps: 3
+stale_data_penalty_bps: 10
+scan_interval_seconds: 5
+paper_loop_seconds: 2
+
+max_notional_per_market: 200
+max_total_notional: 1000
+max_drawdown: 150
+
+enable_live_trading: false
